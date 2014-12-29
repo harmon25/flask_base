@@ -3,9 +3,9 @@
 # @Author: harmoN
 # @Date:   2014-12-21 23:08:35
 # @Last Modified by:   harmoN
-# @Last Modified time: 2014-12-29 17:21:29
+# @Last Modified time: 2014-12-29 18:37:24
 from flask import jsonify,send_file, Response, session, redirect, url_for, abort,render_template, g, request
-from test_flask import app, db, auth, User
+from base_flask import app, db, auth, User
 
 
 @app.route('/',methods=['GET','POST'])
