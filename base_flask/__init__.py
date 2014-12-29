@@ -3,17 +3,18 @@
 # @Author: harmoN
 # @Date:   2014-12-21 23:07:24
 # @Last Modified by:   harmoN
-# @Last Modified time: 2014-12-29 17:56:04
+# @Last Modified time: 2014-12-29 18:36:23
 from datetime import datetime
 from flask import Flask, g
 from flask.ext.sqlalchemy import SQLAlchemy
 import config
+from flask.ext.httpauth import HTTPBasicAuth
 
 
 app = Flask(__name__)
 app.config.from_object('config')
 db = SQLAlchemy(app)
-
+auth = HTTPBasicAuth()
 
 class User(db.Model):
     __tablename__ = 'users'
